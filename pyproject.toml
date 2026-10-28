@@ -1,0 +1,31 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "AdiMedi-9", email = "ramagyaup277001.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "deepagents>=0.7.32",
+    "dotenv>=0.9.9",
+    "langchain-text-splitters>=1.1.3",
+    "langchain[openai]>=1.4.7",
+    "numpy>=2.5.4",
+    "pypdf>=6.21.3",
+    "requests>=2.34.2",
+    "streamlit>=1.66.1",
+]
+
+[project.scripts]
+rag = "rag:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "pypdf",
+]
